@@ -17,8 +17,8 @@ section {
 
 /*************/
 .circle {
-    width: 100vw;
-    height: 100vw;
+    width: 10vw;
+    height: 10vw;
     border-radius: 50%;
     background-color: tomato;
     position: fixed;
@@ -33,19 +33,25 @@ section {
 
 @keyframes circle {
     0% {
-        transform-origin: top left;
-        transform: scale(.1);
+        width: 10vw;
+        height: 10vw;
     }
     30% {
-        transform: translate(70%, 20vh) scale(.2);
+        width: 20vw;
+        height: 20vw;
+        transform: translate(calc(100vw - 20vw), 20vh);
         background-color: lightyellow;
     }
     70% {
-        transform: translate(-20%, 0) scale(.4);
+        width: 10vw;
+        height: 10vw;
+        transform: translate(0, 0);
         background-color: lightskyblue;
     }
     100% {
-        transform: translate(0, 10%) scale(.1);
+        width: 50vw;
+        height: 50vw;
+        transform: translate(calc(100vw - 75vw), calc(100vh - 25vw));
         background-color: lightgreen;
     }
 }
